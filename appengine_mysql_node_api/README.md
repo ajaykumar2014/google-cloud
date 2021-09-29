@@ -20,3 +20,6 @@ INSERT INTO authors (id, name, city) VALUES
 (2, 'Michael Wanyoike', 'Nairobi'),
 (3, 'James Hibbard', 'Munich'),
 (4, 'Karolina Gawron', 'Wrocław');
+
+# Deploy on AppEngine through Google cloud SDK
+ $ gcloud app deploy
