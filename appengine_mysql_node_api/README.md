@@ -1,3 +1,10 @@
+
+# Connect to SQL instance from cloud terminal.
+$ gcloud sql connect <INSTANCE_CONNECTION_NAME> --user=root 
+
+$ gcloud sql connect my-demo-example --user=root 
+# Database Setup in SQL
+
 CREATE DATABASE sitepoint CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE sitepoint;
 
