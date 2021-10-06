@@ -4,5 +4,5 @@ steps:
 #  - name: "gcr.io/cloud-builders/mvn"
 #    args: [ "package", "-Dmaven.test.skip=true" ]
   - name: "gcr.io/cloud-builders/gcloud"
-    args: [ "app", "deploy","appengine-spring-boot/src/main/appengine/app.yaml" ]
+    args: [ "app", "deploy" ]
     timeout: "1600s"
