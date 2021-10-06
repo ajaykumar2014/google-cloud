@@ -6,6 +6,7 @@ steps:
 #  - name: 'gcr.io/cloud-builders/git'
 #    args: [ 'clone', 'https://github.com/ajaykumar2014/google-cloud']
   - name: "gcr.io/cloud-builders/gcloud"
-    dir: "appengine-spring-boot"
+    entrypoint: "bash"
+    dir: "/appengine-spring-boot"
     args: [ "app", "deploy","src/main/appengine/app.yaml" ]
     timeout: "1600s"
