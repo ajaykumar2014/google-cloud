@@ -18,5 +18,5 @@ steps:
 #    entrypoint: 'bash'
 #    args: [ '-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy' ]
 #timeout: '1600s'
-images:
-  - 'gcr.io/$PROJECT_ID/appengine-spring-boot:tag1'
+#images:
+#  - 'gcr.io/$PROJECT_ID/appengine-spring-boot:tag1'
