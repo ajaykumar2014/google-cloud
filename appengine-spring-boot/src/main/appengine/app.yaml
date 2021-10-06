@@ -1,6 +1,6 @@
-runtime: java
-env: flex
-
-handlers:
-  - url: /.*
-    script: this field is required, but ignored
+    runtime: java11
+    instance_class: F4
+    service: appengine-spring-boot
+    handlers:
+      - url: /.*
+        script: this field is required, but ignored
