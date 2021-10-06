@@ -19,5 +19,5 @@ steps:
       - 'gcr.io/$PROJECT_ID/appengine-spring-boot:$COMMIT_SHA'
       - '--region'
       - 'us-central-1'
-  images:
+images:
     - 'gcr.io/$PROJECT_ID/appengine-spring-boot:$COMMIT_SHA'
