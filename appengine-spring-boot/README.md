@@ -1,2 +1,3 @@
 
-*** mvn clean package appengine:deploy
+### Run below command - 
+mvn clean package appengine:deploy
