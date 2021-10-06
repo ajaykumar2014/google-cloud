@@ -12,7 +12,7 @@ RUN mvn package -DskipTests
 FROM adoptopenjdk/openjdk11:alpine-jre
 
 # Copy the jar to the production image from the builder stage.
-COPY --from=builder /app/target/javatech.spring.cloud.api.*.jar /appengine-spring-boot.jar
+COPY --from=builder /app/target/javatech.spring.cloud.api-*.jar /appengine-spring-boot.jar
 
 # Run the web service on container startup.
 CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/appengine-spring-boot.jar"]
