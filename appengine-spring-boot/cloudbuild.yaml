@@ -4,8 +4,10 @@ steps:
     #args: [ 'package','-f','pom.xml','-Dmaven.test.skip=true' ]
     args: [ 'clean', 'package' ]
   - name: 'gcr.io/cloud-builders/docker'
+    dir: 'appengine-spring-boot'
     args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/appengine-spring-boot:tag1', '.' ]
   - name: 'gcr.io/cloud-builders/docker'
+    dir: 'appengine-spring-boot'
     args: [ 'push', 'gcr.io/$PROJECT_ID/appengine-spring-boot:tag1']
   - name: "gcr.io/cloud-builders/gcloud"
     dir: "appengine-spring-boot"
