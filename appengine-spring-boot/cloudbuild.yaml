@@ -3,15 +3,20 @@ steps:
     dir: "appengine-spring-boot"
     #args: [ 'package','-f','pom.xml','-Dmaven.test.skip=true' ]
     args: [ 'clean', 'package' ]
-  - name: 'gcr.io/cloud-builders/docker'
-    dir: 'appengine-spring-boot'
-    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/appengine-spring-boot:tag1', '.' ]
-  - name: 'gcr.io/cloud-builders/docker'
-    dir: 'appengine-spring-boot'
-    args: [ 'push', 'gcr.io/$PROJECT_ID/appengine-spring-boot:tag1']
+#  - name: 'gcr.io/cloud-builders/docker'
+#    dir: 'appengine-spring-boot'
+#    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/appengine-spring-boot:tag1', '.' ]
+#  - name: 'gcr.io/cloud-builders/docker'
+#    dir: 'appengine-spring-boot'
+#    args: [ 'push', 'gcr.io/$PROJECT_ID/appengine-spring-boot:tag1']
   - name: "gcr.io/cloud-builders/gcloud"
     dir: "appengine-spring-boot"
     args: [ "app", "deploy" ]
     timeout: "1600s"
+# We can also setup below steps.
+#  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+#    entrypoint: 'bash'
+#    args: [ '-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy' ]
+#timeout: '1600s'
 images:
   - 'gcr.io/$PROJECT_ID/appengine-spring-boot:tag1'
