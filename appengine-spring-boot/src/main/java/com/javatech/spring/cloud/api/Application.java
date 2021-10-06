@@ -20,5 +20,10 @@ public class Application {
 		public ResponseEntity<?> get(){
 			return ResponseEntity.ok("Welcome to 1st App Engine with Spring boot!!!");
 		}
+
+		@GetMapping("/test")
+		public ResponseEntity<?> getTest(){
+			return ResponseEntity.ok().body("Success");
+		}
 	}
 }

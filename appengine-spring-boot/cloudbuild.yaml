@@ -1,9 +1,9 @@
-steps:
-  - name: 'gcr.io/cloud-builders/mvn'
-    dir: "appengine-spring-boot"
-    #args: [ 'package','-f','pom.xml','-Dmaven.test.skip=true' ]
-    args: [ 'clean', 'package']
-  - name: "gcr.io/cloud-builders/gcloud"
-    dir: "appengine-spring-boot"
-    args: [ "app", "deploy" ]
-    timeout: "1600s"
+    steps:
+      - name: 'gcr.io/cloud-builders/mvn'
+        dir: "appengine-spring-boot"
+        #args: [ 'package','-f','pom.xml','-Dmaven.test.skip=true' ]
+        args: [ 'clean', 'package']
+      - name: "gcr.io/cloud-builders/gcloud"
+        dir: "appengine-spring-boot"
+        args: [ "app", "deploy" ]
+        timeout: "1600s"
